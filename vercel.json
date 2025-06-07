@@ -1,8 +1,0 @@
-{
-  "middleware": [
-    {
-      "src": "/(.*)",
-      "middlewarePath": "middleware.js"
-    }
-  ]
-}
