@@ -1,10 +1,11 @@
 {
-  "cleanUrls": true,
-  "rewrites": [
-    { "source": "/", "destination": "/index.html" }
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
   ],
-  "outputDirectory": "src",
-  "redirects": [],
-  "headers": [],
-  "trailingSlash": false
+  "routes": [
+    { "src": "/(.*)", "dest": "index.js" }
+  ]
 }
