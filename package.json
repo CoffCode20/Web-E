@@ -4,8 +4,8 @@
     "tsc": "^2.0.4"
   },
   "scripts": {
-    "build": "tsc && npx tailwindcss -i ./src/input.css -o ./output.css",
-    "dev": "tsc --watch & npx tailwindcss -i ./src/input.css -o ./output.css --watch"
+     "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+      "build": "tsc && npx tailwindcss -i ./src/input.css -o ./src/output.css"
   },
   "name": "homework001",
   "version": "1.0.0",
