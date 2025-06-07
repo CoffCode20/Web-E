@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern E-commerce Navbar</title>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white/80 backdrop-blur-md shadow-lg border-b border-white/20 sticky top-0 z-50 modern-shadow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center animate-bounce-in">
+                    <img src="./public/assert/ishop-dark-logo.png" class="w-24 md:w-32 lg:w-36" alt="">
+                </div>
+
+                <!-- Search Bar (Desktop) -->
+                <div class="hidden md:flex flex-1 max-w-lg mx-8 animate-fade-in">
+                    <div class="relative w-full">
+                        <div class="absolute z-10 inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-800 duration-300"></i>
+                        </div>
+                        <input type="text" id="desktop-search"
+                               class="search-glow block w-full pl-12 pr-4 py-3 border-0 rounded-2xl leading-5 backdrop-blur-sm placeholder-gray-500 focus:outline-none transition-all duration-300 shadow-inner" 
+                               placeholder="Search for amazing products...">
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Icons -->
+                <div class="hidden lg:flex items-center space-x-6 animate-fade-in">
+                    <button class="relative text-gray-600 hover:text-primary transition-all duration-300">
+                        <i class="fas fa-shopping-cart text-xl "></i>
+                        <span class="absolute -top-2 -right-2 bg-gradient-to-r from-primary to-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center shadow-lg">2</span>
+                    </button>
+                    <button class="relative text-gray-600 hover:text-primary transition-all duration-300 ">
+                        <i class="fas fa-bell text-xl"></i>
+                        <div class="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full"></div>
+                    </button>
+                    <button class="relative text-gray-600 hover:text-primary transition-all duration-300">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="lg:hidden flex items-center space-x-4">
+                    <button class="relative text-gray-600 hover:text-primary transition-all duration-300">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="absolute -top-2 -right-2 bg-gradient-to-r from-primary to-orange-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">2</span>
+                    </button>
+                    <button class="relative text-gray-600 hover:text-primary transition-all duration-300">
+                        <i class="fas fa-user text-xl"></i>
+                    </button>
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-primary transition-all duration-300">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden px-4 pb-4">
+            <div class="relative animate-fade-in">
+                <div class="absolute z-10 inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+                    <i class="fas fa-search"></i>
+                </div>
+                <input type="text" id="mobile-search"
+                       class="search-glow block w-full pl-12 pr-4 py-3 border-0 rounded-2xl leading-5 backdrop-blur-sm placeholder-gray-500 focus:outline-none transition-all duration-300" 
+                       placeholder="Search products...">
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white/90 backdrop-blur-md border-t border-white/20">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#" data-category="Television" class="category-item category-link flex items-center space-x-3 text-gray-700 hover:text-primary transition-all duration-300 hover:translate-x-2 group hover:bg-gray-300 hover:rounded-2xl hover:p-2">
+                    <i class="fas fa-tv w-5 group-hover:"></i>
+                    <span>Television</span>
+                </a>
+                <a href="#" data-category="Audio" class="category-item category-link flex items-center space-x-3 text-gray-700 hover:text-primary transition-all duration-300 hover:translate-x-2 group hover:bg-gray-300 hover:rounded-2xl hover:p-2">
+                    <i class="fas fa-headphones w-5 group-hover:"></i>
+                    <span>Audio</span>
+                </a>
+                <a href="#" data-category="Laptop" class="category-item category-link flex items-center space-x-3 text-gray-700 hover:text-primary transition-all duration-300 hover:translate-x-2 group hover:bg-gray-300 hover:rounded-2xl hover:p-2">
+                    <i class="fas fa-laptop w-5"></i>
+                    <span>Laptop</span>
+                </a>
+                <a href="#" data-category="Mobile" class="category-item category-link flex items-center space-x-3 text-gray-700 hover:text-primary transition-all duration-300 hover:translate-x-2 group hover:bg-gray-300 hover:rounded-2xl hover:p-2">
+                    <i class="fas fa-mobile-alt w-5"></i>
+                    <span>Mobile</span>
+                </a>
+                <a href="#" data-category="Gaming" class="category-item category-link flex items-center space-x-3 text-gray-700 hover:text-primary transition-all duration-300 hover:translate-x-2 group hover:bg-gray-300 hover:rounded-2xl hover:p-2">
+                    <i class="fas fa-gamepad w-5"></i>
+                    <span>Gaming</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <div class="flex">
+        <!-- Modern Animated Sidebar -->
+        <aside class="hidden lg:block w-72 gradient-bg sticky overflow-y-auto top-16 left-0 z-20 modern-shadow ">
+            <!-- Categories Header with Glass Effect -->
+            <div class="px-6 py-6 relative overflow-hidden">
+                <div class="absolute inset-0 bg-white/10 backdrop-blur-sm"></div>
+                <h3 class="relative text-xl font-bold text-white flex items-center animate-bounce-in">
+                    Categories
+                </h3>
+            </div>
+            
+            <!-- Categories List with Modern Design -->
+            <div class="py-4 px-2">
+                <ul class="space-y-2">
+                    <li class="relative animate-fade-in" style="animation-delay: 0.1s">
+                        <a href="#" data-category="Television" class="category-item group flex items-center px-6 py-4 text-white/90 hover:text-white rounded-xl mx-2 transition-all duration-300 hover:bg-white/10 glass-effect">
+                            <i class="fas fa-tv category-icon mr-4 text-lg"></i>
+                            <span class="font-medium">Television</span>
+                        </a>
+                        <div class="active-indicator show absolute right-2 top-2 bottom-2 w-1 bg-gradient-to-b from-orange-400 to-red-500 rounded-full shadow-lg hidden"></div>
+                    </li>
+                    
+                    <li class="relative animate-fade-in" style="animation-delay: 0.2s">
+                        <a href="#" data-category="Audio" class="category-item group flex items-center px-6 py-4 text-white/90 hover:text-white rounded-xl mx-2 transition-all duration-300 hover:bg-white/10 glass-effect">
+                            <i class="fas fa-headphones category-icon mr-4 text-lg"></i>
+                            <span class="font-medium">Audio</span>
+                        </a>
+                        <div class="active-indicator show absolute right-2 top-2 bottom-2 w-1 bg-gradient-to-b from-orange-400 to-red-500 rounded-full shadow-lg hidden"></div>
+                    </li>
+                    
+                    <li class="relative animate-fade-in" style="animation-delay: 0.3s">
+                        <a href="#" data-category="Laptop" class="category-item group flex items-center px-6 py-4 text-white/90 hover:text-white rounded-xl mx-2 transition-all duration-300 hover:bg-white/10 glass-effect">
+                            <i class="fas fa-laptop category-icon mr-4 text-lg"></i>
+                            <span class="font-medium">Laptop</span>
+                        </a>
+                        <div class="active-indicator show absolute right-2 top-2 bottom-2 w-1 bg-gradient-to-b from-orange-400 to-red-500 rounded-full shadow-lg hidden"></div>
+                    </li>
+                    
+                    <li class="relative animate-fade-in" style="animation-delay: 0.4s">
+                        <a href="#" data-category="Mobile" class="category-item group flex items-center px-6 py-4 text-white/90 hover:text-white rounded-xl mx-2 transition-all duration-300 hover:bg-white/10 glass-effect">
+                            <i class="fas fa-mobile-alt category-icon mr-4 text-lg"></i>
+                            <span class="font-medium">Mobile</span>
+                        </a>
+                        <div class="active-indicator show absolute right-2 top-2 bottom-2 w-1 bg-gradient-to-b from-orange-400 to-red-500 rounded-full shadow-lg hidden"></div>
+                    </li>
+                    
+                    <li class="relative animate-fade-in" style="animation-delay: 0.5s">
+                        <a href="#" data-category="Gaming" class="category-item group flex items-center px-6 py-4 text-white/90 hover:text-white rounded-xl mx-2 transition-all duration-300 hover:bg-white/10 glass-effect">
+                            <i class="fas fa-gamepad category-icon mr-4 text-lg"></i>
+                            <span class="font-medium">Gaming</span>
+                        </a>
+                        <div class="active-indicator show absolute right-2 top-2 bottom-2 w-1 bg-gradient-to-b from-orange-400 to-red-500 rounded-full shadow-lg hidden"></div>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+        
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+
+            <div id="default-carousel" class="relative w-full" data-carousel="slide">
+                <!-- Carousel wrapper -->
+                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/assert/ban1.avif" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/assert/ban2.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/assert/ban3.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 4 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/assert/ban4.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                    <!-- Item 5 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="./public/assert/ban5.webp" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+                    </div>
+                </div>
+                <!-- Slider indicators -->
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                    <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                </div>
+                <!-- Slider controls -->
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+                        </svg>
+                        <span class="sr-only">Previous</span>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                        <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+                        </svg>
+                        <span class="sr-only">Next</span>
+                    </span>
+                </button>
+            </div>
+
+            <div class="mt-6 mb-4 ml-3" id="filter-bar">
+                <a href="#" id="filter-all" data-filter="all" class="mr-4 filter-btn bg-slate-500 px-3 py-1 rounded">All</a>
+                <a href="#" data-filter="cheaper" class="mr-4 filter-btn hover:bg-slate-500 px-3 py-1 rounded">Cheaper</a>
+                <a href="#" data-filter="expensive" class="mr-4 filter-btn hover:bg-slate-500 px-3 py-1 rounded">Expensive</a>
+                <a href="#" data-filter="popular" class="mr-4 filter-btn hover:bg-slate-500 px-3 py-1 rounded">Popular</a>
+            </div>
+
+
+            <div class="" id="app"> 
+            </div>
+        </main>
+        </div>
+
+       
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const categoryItems = document.querySelectorAll('.category-item');
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            let activeCategory = '';
+            let activeFilter = 'all';
+
+            function clearCategoryActiveStates() {
+                categoryItems.forEach(item => item.classList.remove('active'));
+                document.querySelectorAll('.active-indicator').forEach(i => i.classList.add('hidden'));
+            }
+
+            function clearFilterActiveStates() {
+                filterButtons.forEach(btn => btn.classList.remove('bg-slate-500'));
+            }
+
+            categoryItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    activeCategory = item.dataset.category || '';
+                    fetchAndRenderProducts('app', 1, 30, '', activeCategory, activeFilter);
+
+                    clearCategoryActiveStates();
+                    item.classList.add('active');
+                    const indicator = item.parentElement.querySelector('.show');
+                    if (indicator) indicator.classList.remove('hidden');
+                });
+            });
+
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    activeFilter = btn.dataset.filter || 'all';
+                    fetchAndRenderProducts('app', 1, 30, '', activeCategory, activeFilter);
+
+                    clearFilterActiveStates();
+                    btn.classList.add('bg-slate-500');
+                });
+            });
+
+            // Initial Load: All products + All filter selected
+            document.getElementById('filter-all')?.classList.add('bg-slate-500');
+            fetchAndRenderProducts('app', 1, 30, '', '', 'all');
+        });
+        
+        document.querySelectorAll('.category-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Remove active styles from all links
+            document.querySelectorAll('.category-link').forEach(el => {
+                el.classList.remove('bg-gray-300', 'rounded-2xl', 'p-2', 'text-primary', 'font-semibold');
+            });
+
+            // Add active styles to the clicked one
+            this.classList.add('bg-gray-300', 'rounded-2xl', 'p-2', 'text-primary', 'font-semibold');
+            });
+        });
+        
+    </script>
+
+    <script>
+        // Mobile menu toggle with animation
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = mobileMenuButton.querySelector('i');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Animate icon change
+            menuIcon.style.transform = 'rotate(180deg)';
+            setTimeout(() => {
+                if (mobileMenu.classList.contains('hidden')) {
+                    menuIcon.className = 'fas fa-bars text-xl';
+                } else {
+                    menuIcon.className = 'fas fa-times text-xl';
+                }
+                menuIcon.style.transform = 'rotate(0deg)';
+            }, 150);
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fas fa-bars text-xl';
+            }
+        });
+
+        // Close mobile menu when window is resized to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth >= 1024) {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fas fa-bars text-xl';
+            }
+        });
+
+        // Enhanced category selection with smooth animations
+        document.querySelectorAll('.category-item').forEach((item, index) => {
+            item.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Remove active class from all items with animation
+                document.querySelectorAll('.category-item').forEach(cat => {
+                    cat.classList.remove('active');
+                    const icon = cat.querySelector('.category-icon');
+                    icon.style.transform = 'scale(1)';
+                    icon.style.color = '';
+                });
+                
+                // Hide all active indicators with animation
+                document.querySelectorAll('.active-indicator').forEach(indicator => {
+                    indicator.classList.remove('show');
+                });
+                
+                // Add active class to clicked item with animation
+                item.classList.add('active');
+                const activeIcon = item.querySelector('.category-icon');
+                activeIcon.style.transform = 'scale(1.1)';
+                activeIcon.style.color = '#ff6b35';
+                
+                // Show the indicator for the active item with delay for smooth animation
+                setTimeout(() => {
+                    const indicator = item.parentElement.querySelector('.active-indicator');
+                    if (indicator) {
+                        indicator.classList.add('show');
+                    }
+                }, 100);
+                
+            });
+
+            // Add staggered animation on load
+            item.style.animationDelay = `${index * 0.1}s`;
+        });
+        // Search bar focus animation
+        document.querySelectorAll('input[type="text"]').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            input.addEventListener('blur', () => {
+                input.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        // Add parallax effect to sidebar background
+        window.addEventListener('scroll', () => {
+            const sidebar = document.querySelector('aside');
+            if (sidebar) {
+                const scrolled = window.pageYOffset;
+                sidebar.style.transform = `translateY(${scrolled * 0.1}px)`;
+            }
+        });
+
+        // Add intersection observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all product cards
+        document.querySelectorAll('.hover-lift').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script type="module">
+        import { fetchAndRenderProducts, fetchProductById } from './dist/api/fetchAndRenderProducts.js';
+        window.fetchAndRenderProducts = fetchAndRenderProducts;
+        window.fetchProductById = fetchProductById;
+
+        // Initial render
+        fetchAndRenderProducts('app');
+
+        // Search functionality
+        ['desktop-search', 'mobile-search'].forEach(id => {
+            const input = document.getElementById(id);
+            input.addEventListener('input', (e) => {
+                const searchTerm = e.target.value.trim();
+                fetchAndRenderProducts('app', 1, 30, searchTerm);
+            });
+        });
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+    <script type="module" src="./src/showProductDetails.js"></script>
+
+
+</body>
+</html>
