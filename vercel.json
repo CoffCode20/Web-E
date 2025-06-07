@@ -3,6 +3,7 @@
   "rewrites": [
     { "source": "/", "destination": "/index.html" }
   ],
+  "outputDirectory": "src",
   "redirects": [],
   "headers": [],
   "trailingSlash": false
