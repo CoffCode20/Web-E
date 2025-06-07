@@ -6,9 +6,8 @@
     "tsc": "^2.0.4"
   },
   "scripts": {
-    "build:ts": "npx tsc",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./src/output.css",
-    "build": "npm run build:ts && npm run build:css"
+    "build": "tsc && npx tailwindcss -i ./src/input.css -o ./output.css",
+    "dev": "tsc --watch & npx tailwindcss -i ./src/input.css -o ./output.css --watch"
   },
   "name": "homework001",
   "version": "1.0.0",
