@@ -6,7 +6,9 @@
     "tsc": "^2.0.4"
   },
   "scripts": {
-    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+    "build:ts": "tsc --outDir dist/api",
+    "build:css": "npx tailwindcss -i src/api/input.css -o dist/api/output.css",
+    "build": "npm run build:ts && npm run build:css && cp index.html dist/"
   },
   "name": "homework001",
   "version": "1.0.0",
