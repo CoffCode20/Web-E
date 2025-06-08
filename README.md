@@ -6,7 +6,7 @@ This project is a clean, responsive frontend layout for an e-commerce website. I
 - ✅ **TypeScript** for type-safe scripting
 - ✅ **AOS** for scroll-based animations
 - ✅ **Flowbite** for UI components
-- ✅ **Vanilla HTML & JS/TS** – no frameworks
+- ✅ **HTML & JS/TS** – no frameworks
 
 ---
 
